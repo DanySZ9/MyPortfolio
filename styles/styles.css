@@ -202,10 +202,3 @@ header.about-me .navbar .social-media a:hover,
 header.about-me .navbar .lista .section a:hover {
     color: #f5f1ed;
 }
-
-img {
-    position: relative;
-    right: 125px;
-    top: 100px;
-    height: 500px;
-}

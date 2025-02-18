@@ -57,7 +57,7 @@ header .navbar {
     font-size: 18px;
     cursor: pointer;
     transition: 0.25s all ease;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 .navbar .lista .section a:hover {
     color: #f5f1ed;
@@ -77,6 +77,18 @@ header .navbar {
     display: flex;
     justify-content: space-around;
     font-size: 20px;
+}
+
+/* Menu de la barra de navegacion */
+.navbar .checkbtn {
+    font-size: 30px;
+    color: #a99985;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
 }
 
 /* Apartado de Home */
@@ -201,4 +213,81 @@ header.about-me .navbar .lista .section a {
 header.about-me .navbar .social-media a:hover,
 header.about-me .navbar .lista .section a:hover {
     color: #f5f1ed;
+}
+
+
+@media (max-width: 1350px) {
+
+    .navbar {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .navbar .sections { 
+        width: 70%;
+        font-size: 25px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .social-media a {
+        font-size: 20px;
+        padding: 0 10px 0 0;
+    }
+
+}
+
+@media (max-width: 950px) {
+    
+    .navbar {
+        width: 90%
+    }
+    .navbar .sections {
+        width: 100%;
+        position: relative;
+        left: 35px;
+    }
+    .social-media a {
+        display: none;
+    }
+    .navbar .checkbtn {
+        display: block;
+    }
+    .navbar .sections .social-media {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #a99985;
+        top: 100%;
+        left: -100%;
+        text-align: center;
+        transition: .25s all ease;
+    }
+    .navbar .sections .social-media a {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .navbar .sections .social-media a i {
+        font-size: 20px;
+    }
+    #check:checked ~ .social-media {
+        left: 0%;
+    }
+
+}
+
+@media (max-width: 805px) {
+
+    .navbar .sections {
+        display: none;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .navbar .logo h3 {
+        font-size: 40px;
+    }
+    .navbar .checkbtn {
+        font-size: 40px;
+    }
+
 }
